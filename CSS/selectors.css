@@ -1,0 +1,42 @@
+#div1{
+    background-color: aqua;
+    width: 100px;
+    height: 100px;
+    /* display: flex; */
+    overflow: auto;
+}
+#div1{
+    background-color: blue;
+    width: 50px;
+    height: 100px;
+    display: flex;
+}
+
+/* to add style to class */
+
+.imgdiv {
+    width: 400px;
+    height: 400px;
+    border: 2px solid black;
+    display: flex;
+
+}
+.img2{
+    width: 200px;
+    height: 200px;
+}
+.p1{
+    float: left;
+}
+
+/* This is attribute selector */
+img[alt = "img1"]{
+    border-radius: 30%;
+    width: 200px;
+    height: 102px;
+} 
+
+/* universal selector */
+*{
+    background-color: aqua;
+}

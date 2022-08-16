@@ -1,0 +1,37 @@
+.box{
+    border: 2px solid red;
+    /* to get everything in same line */
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    margin: 2px;
+}
+
+/* It is an hybrid of absolute and fixed */
+#id3{
+    position: sticky;
+    top: 3px;
+
+}
+
+/* relative will take top left right bottom with respect
+to original position */
+#id2{
+    position: relative;
+    top: 20px;
+    left: 20px;
+
+}
+
+/* it will take top left right
+bottom with respec to parent element */
+#id4{
+    position: absolut;
+    top: 34px;
+    right: 34px;
+}
+
+.container{
+    border: 2px solid black;
+    height: 3444px;
+}
