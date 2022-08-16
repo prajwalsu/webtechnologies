@@ -25,4 +25,32 @@ console.log(c);//30
 
 // temporsl dead zone is atime between variable declaration and variable initialized
 // you can not access the variable until they are assigned with vaule
+let sec ="b";
+
+// console.log(number2);
+const number2 =56;
+let x =10;
+console.log(x);
+// letx =20;//redeclaring of variables is not possible if it is let keyword but re-iniTILIZAtion is possib;e
+
+let m=20;
+x=m;
+console.log(x);
+
+// if it is const keyword re-declaration and re - initilization is not possible
+const y=50;
+
+console.log(y);
+// y=m;
+console.log(y);
+
+// console.log(num);//error
+// const num = 20;
+
+const num = 30;
+let num2 = 20;
+
+num = num2;//re-initialization
+console.log(num2);
+
 
