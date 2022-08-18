@@ -6,6 +6,7 @@ let c = ++a; //the increment operator increments and return thr value before inc
 // let c =++a; //it increments the value and return the incremented value
 console.log(b);
 console.log(a);
+console.log(c);
 
 // comparision operators
         

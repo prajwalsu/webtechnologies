@@ -1,4 +1,4 @@
-debugger;
+// debugger;
 console.log(student); //akshata
 
 var student = "akshata";
@@ -31,7 +31,7 @@ let sec ="b";
 const number2 =56;
 let x =10;
 console.log(x);
-// letx =20;//redeclaring of variables is not possible if it is let keyword but re-iniTILIZAtion is possib;e
+// let x =20;//redeclaring of variables is not possible if it is let keyword but re-iniTILIZAtion is possib;e
 
 let m=20;
 x=m;
