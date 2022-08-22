@@ -23,7 +23,7 @@ console.log(c);//30
 // let and const
 // console.log(sec); //undefined
 
-// temporsl dead zone is atime between variable declaration and variable initialized
+// temporsl dead zone is a time between variable declaration and variable initialized
 // you can not access the variable until they are assigned with vaule
 let sec ="b";
 

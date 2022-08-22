@@ -57,7 +57,7 @@ console.log(arr3, "nested array");
 console.log(arr1.flat());
 
 // join method will convert array to string
-const citys = ["banglore", "Kolar0", "Tumkur", "hubli"];
+const citys = ["banglore", "Kolar", "Tumkur", "hubli"];
 
 let string  = citys.join(" ");
 console.log(string);
@@ -76,7 +76,6 @@ let x = arrayData.findIndex(votingEligibility);
 console.log(x);
 
 // indexOf
-
 // the  index method will retrun the first index position of the specifies value
 // indexOf method return if your array does not have the specegied valye -1
 console.log(arrayData.indexOf(17));// not found
@@ -145,3 +144,61 @@ hobbies.forEach(function(val, ind, arr) {
 // includes
 console.log(hobbies.includes("cricket"));//true it return bollean
 console.log(hobbies.includes("cri"));//false it return boolian
+
+// find method
+// find meyhod will take one callback function and it
+// returns the first elemnt that match the condition
+let arryFind = [30, 1, 4, 5, 9, 65, 8, 4];
+
+const found = arryFind.find((value) => value > 10);
+console.log(found);
+
+// sort()
+// it will consider the values as sring
+// it will arrange an elements in an ascending or descing order
+// new array with in sorted order
+// it will over writes the original array
+
+let sortArray = [15, 18, 78, 13, 23, 44, 54, 32, 99, 100]; 
+sortArray.sort(); //with op
+
+
+
+// splice method
+// we splice method to add or remove the element in mid of the array
+// it will affect your original array
+// it returns the removed elements if any element is rmeoved
+// arrayData.splice(start-index,no of elemnts to be removed,new elemnts to be added
+
+let spliceArray = [2, 4, 7, 3, 5, 6, 8, 9, 10];
+
+
+let splicedArray = spliceArray.splice(3, 2, 56, 78);
+console.log(spliceArray);//
+console.log(splicedArray);//splice method will rtuen the deleted elements
+ 
+// adding element with out deleting
+let noDelete = spliceArray.splice(2, 0, 25, 60);
+console.log(spliceArray);
+console.log(noDelete);
+
+// slice method
+// slice method will return the new array
+// it will take two arguments start 0
+// to delete an element in mid of the array
+
+let sliceArray = ["CIT","SSIT","KIT","NIST","christ"]; //original copy
+
+const data2 = sliceArray.slice(1); //ssit,ki, nist christ
+const data3 = sliceArray.slice(2);//"kit nist christ"
+const data4 = sliceArray.slice(2,4);//first argument is excluded and second argument is printed
+const data5 = sliceArray.slice(-2);//nist,christ
+const data6 = sliceArray.slice(2,-1);//
+
+console.log(data2, "sliced array");
+console.log(data3);
+console.log(data4);
+console.log(data5);
+console.log(data6);
+
+console.log(sliceArray, "original array");

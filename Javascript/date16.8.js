@@ -11,9 +11,10 @@ console.log(systemDate.getTime()); //it will return in milli seconds
 console.log(systemDate.getFullYear());
 console.log(systemDate.getMinutes());
 
-const dateString = new Date("Dec/21/2021");
-console.log(dateString);
-console.log(dateString.getDay());
+const dateStr= new Date("Dec/21/2021");
+console.log(dateStr);
+console.log(dateStr.getDay());
+
 
 "tuesday"/08/2022;
 

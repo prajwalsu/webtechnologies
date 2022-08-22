@@ -12,7 +12,7 @@ var obj={
 console.log(obj);
 
 var obj1=new Object();//creating an object using new key value
-obj1.name="nuthana";
-obj1.phnnumber=23456;
-obj1.age=25;
+obj1.name="nuthana",
+obj1.phnnumber=23456,
+obj1.age=25,
 console.log(obj);

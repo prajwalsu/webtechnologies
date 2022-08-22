@@ -33,8 +33,8 @@ let m = {
 let n = { ...m};
 m.name = "vibhav";
 n.age = 25;
-console.log(n); //name:"avi" , phno:4561, gage:25
-console.log(m); //name:"vaibhav", phno:45612, age:22
+console.log(n); //name:"avi" , phno:345612, age:25
+console.log(m); //name:"vaibhav", phno:345612, age:22
 
 let person = {
     fName: "Nayana",
@@ -60,3 +60,25 @@ let deepCopy = { ...person, moreDetails: { ...person.moreDetails } };
 person.moreDetails.blodGroup = "AB+";
 console.log(person); //fname:"nuthana" blodgroup:AB+
 console.log(personCopy); //fname:"nayana" blod A+
+
+// deep copy will copy all the levels of array or aobject
+// new object wil be crewated with new reference
+
+// json.parse() : this will convert json to js object
+// json.stringfy will convert from object to json object
+const personCopyJson = JSON.parse(JSON.stringify(person));
+console.log(personCopyJson);
+
+// destructuring
+
+let person2 = {
+    name : "Avi",
+    ph : 456123,
+    address : "tumkur",
+    email : "avi@gmail.com"
+};
+let{name, ph, address, email} = person2;
+console.log(name);
+
+const [a, b] = [ 23, 24 ] //array destructuring
+console.log(a);
