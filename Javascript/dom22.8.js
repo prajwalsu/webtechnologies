@@ -26,9 +26,9 @@ console.log(elements);
 console.log(elements.length);
 
 for (let i = 0; i < elements.length; i++) {
-  if (i == 0) {
+  if (i === 0) {
     elements[i].innerText = "nayana";
-  } else if (i == 1) {
+  } else if (i === 1) {
     elements[i].innerText = "s r";
   } else {
     elements[i].innerText = "banglore";

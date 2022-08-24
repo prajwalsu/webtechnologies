@@ -172,13 +172,45 @@
 
 // with new Object 
 
-var newObj = new Object();
-newObj.name = "vikram", //no :, only = to assign values
-newObj.post = "troop Commander",
-newObj.skill = "Leader",
-console.log(newObj);
+// var newObj = new Object();
+// newObj.name = "vikram", //no :, only = to assign values
+// newObj.post = "troop Commander",
+// newObj.skill = "Leader",
+// console.log(newObj);
 
-// with out new Object
-var withOutNewObject = {name : "tena", post : "Pshcology", skill : "deadly fighter"}; //no =, only : to assign values
-console.log(withOutNewObject);
+// // with out new Object
+// var withOutNewObject = {name : "tena", post : "Pshcology", skill : "deadly fighter"}; //no =, only : to assign values
+// console.log(withOutNewObject);
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                                    // Fetch Api//
+
+// function getData(){
+//     url = 'https://api.github.com/users';
+//     fetch(url).then((response) => {
+//         return response.json();
+//     }).then((data) => {
+//         console.log(data);
+//     });
+// };
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                                    //string methods//
+
+// primitive datatypes ( Imutable ) : string, boolean, integer, null, indefined
+// refernce datatypes ( mutable )   : Array, object, function  
+
+// var movie = "Vikram";
+// movie.toUpperCase();
+// console.log(movie); //string is immutable
+
+var movie = "vikram";
+var star = movie.toUpperCase();
+console.log(star); //we can also give the same name but confusing
+
+var greeting = "very good morning";
+console.log(greeting.indexOf("v",`this is the index`));
+
 
