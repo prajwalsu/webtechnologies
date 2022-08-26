@@ -1,0 +1,118 @@
+REACT JS 		  
+===================================================
+Assignment 1 
+===================================================
+1. What is React JS ? 
+==>
+React is a JavaScript library created by Facebook
+
+React is a User Interface (UI) library
+
+React is a tool for building UI components
+
+2. Why React ?
+==>
+React is an excellent tool with which to create interactive applications for mobile, 
+web, and other platforms. React's popularity and usage are increasing day by day for good reason. 
+As a developer, coding in React makes you better at JavaScript, 
+a language that holds nearly 90% of the web development share today
+
+3. What is diff bw library and framework ?
+==>
+Library : Library is a part of framework, which can do single task
+
+Framework : its is combination so many libraries, in this only some libraries are used
+
+4. React vs React DOM
+==>
+ all ReactDOM functionality was part of React. 
+
+As the name implies, ReactDOM is the glue between React and the DOM. 
+Often, you will only use it for one single thing: mounting with ReactDOM.render(). 
+Another useful feature of ReactDOM is ReactDOM.findDOMNode() which you can use to gain direct access to a DOM element. 
+(Something you should use sparingly in React apps, but it can be necessary.) 
+If your app is "isomorphic", you would also use ReactDOM.renderToString() in your back-end code.
+
+5. How to create react elements ?
+==>
+const Element = React.createElement("h1", null, "hello");
+ReactDOM.render(Element, document.getElementById("container"));
+
+6. What is Virtual DOM ? 
+==> 
+The virtual DOM (VDOM) is a programming concept where an ideal, or “virtual”, 
+representation of a UI is kept in memory and synced with the “real” DOM by a library such as ReactDOM. 
+This process is called reconciliation.
+
+7. Real DOM vs Virtual DOM ? 
+==>
+A virtual DOM object has the same properties as a real DOM object, 
+but it lacks the real thing's power to directly change what's on the screen. 
+Manipulating the DOM is slow. Manipulating the virtual DOM is much faster, because nothing gets drawn onscreen.
+
+8. What is Single Page Application ?
+==>
+A single-page application (SPA) is a web application or website that interacts with the user by dynamically
+rewriting the current web page with new data from the web server, 
+
+9. What is Babel?
+==>
+Babel is a toolchain that is mainly used to convert ECMAScript 2015+ code into a backwards compatible version 
+of JavaScript in current and older browsers or environments. 
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+                              
+								//Diffing algorithm//
+
+Diffing Algorithim works when there is a change in the root of the DOM.
+
+/orginal/
+
+<div>
+<p> i am p</p>
+</div>
+
+/updated/ 
+
+<script>
+<p> i am p</p>
+</script>
+
+/////////////////////////
+
+/orginal/
+
+<div className = "style">
+<p>i a p</p>
+</div>
+
+
+/updated/ 
+
+<div className = "color">
+<p>i a p</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
