@@ -68,3 +68,16 @@ class Greet extends React.Component{
 
 ReactDOM.render(<Greet lName="Avi"/>, document.getElementById("container")
 );
+
+// class Greet extends React.Component {
+// // creating state
+//     state = {
+//         fName : "praju",
+//         age : "22"
+//     }
+
+//     render() {
+         
+//         return;
+//     }
+// }
