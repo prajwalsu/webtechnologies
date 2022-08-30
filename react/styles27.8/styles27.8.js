@@ -1,7 +1,7 @@
 // inline css
 
 function Greet() {
-    const myStyle = { backgroundColor: "red" };
+    // const myStyle = { backgroundColor: "red" };
     return (
         <div className="main">
             <div className="n1">

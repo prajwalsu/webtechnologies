@@ -262,6 +262,86 @@ of JavaScript in current and older browsers or environments.
 ==> Keys help React identify which items have changed, are added, or are removed. 
 Keys should be given to the elements inside the array to give the elements a stable identity:
 
+Assignment 3 
+===================================================
+
+1. Difference b/w props and state ?
+2. Example to pass data from parent to child 
+3. What is setState (). Explain 
+4. Explain writing events in Class component and functional component with an example ?
+
+
+1==> Props are immutable
+     state are mutable
+  
+     Props are arguments passed into React components.
+     states are special type of objects in React components.
+
+3==>setState-->setState() schedules an update to a component’s state object.
+    When state changes, the component responds by re-rendering.
+
+
+2==>
+
+4==>event listener with class component
+
+   class Welcome extends React.Component {
+    render() {
+        console.log(this.props);
+        let firstName = "Avi";
+        return (
+            <div>
+                <h1>
+                    Welcome {firstName} and {this.props.secondName}
+                </h1>
+                <button onClick={this.getData()}>click</button>
+                <button onClick={() => {
+                    this.getName();
+                }}>get name</button>
+                <button onClick={this.greet.bind(this)}>greet</button>
+            </div>
+        );
+    }
+    getData() {
+        console.log("Get data executed");
+        console.log(this);
+    }
+    greet() {
+        console.log("greet method executed");
+        console.log(this);
+    }
+    getName() {
+        console.log(this.props.children);
+    }
+}
+
+ReactDOM.render(<Welcome secondName="Ram"> <h1>hello</h1></Welcome>,
+    document.getElementById("container")
+);
+
+
+
+===================================================
+Assignment 4 
+===================================================
+
+1. Example for passing data from child to parent component 
+2. TODO APP 
+3. Explain Lifecycle methods of Class component with an example 
+4. Example for conditional rendering style and classes and component
+5. localStorage Assignment
+6. setState is Asynchronous or not ? What is the proper way to update the state ?
+7. 5 programs to pass data from child to parent
+8. 2 programs to pass data from parent to child
+
+
+ASSIGNMENT-4
+
+   localStorage is one of the two mechanisms of a browser’s web storage. 
+   It allows users to save data as key-value pairs in the browser for later use.
+
+   localStorage does not clear data when the browser closes. 
+   This makes it ideal for persisting data not bound to the current browser tab.
 
 
 

@@ -94,32 +94,151 @@
 // no render, write statement inside return 
 
 // 1 method
-function Content(props) {
-    return(
-       <h1>I am content - {props.logo} - {props.product} </h1>
-    )
-};
+// function Content(props) {
+//     return(
+//        <h1>I am content - {props.logo} - {props.product} </h1>
+//     )
+// };
 
-// 2nd method
-function Header({logo,product}){
-    return(
-        <h1>I am Header - {logo} - {product} </h1>
-    )
-};
+// // 2nd method
+// function Header({logo,product}){
+//     return(
+//         <h1>I am Header - {logo} - {product} </h1>
+//     )
+// };
 
-// 3rd method
-function Footer(props){
-    let{logo, product} = props;
-    return( 
-        <h1>I am footer - {logo} - {product} </h1>
-    )
+// // 3rd method
+// function Footer(props){
+//     let{logo, product} = props;
+//     return( 
+//         <h1>I am footer - {logo} - {product} </h1>
+//     )
+// }
+
+// ReactDOM.render(
+// <div>
+// <Content logo = "AstonMartin" product = "Bond's car"/>
+// <Header logo = "Pagani" product = "unique design"/>
+// <Footer logo = "RR" product = "engine"/>
+// </div>,
+//  document.getElementById("container"));
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                                                    //   appling color to using jsx and css
+
+// using function
+
+// function Box (){
+//     return(
+//         <div className="main">
+//             <div className="b1">
+//                 <div className="b11"></div>
+//                 <div className="b12"></div>
+//             </div>
+//             <div className="b2">
+//                 <div className="b21"></div>
+//                 <div className="b22"></div>
+//             </div>
+//         </div>
+//     );
+// }
+
+// ReactDOM.render(<Box/>,document.getElementById("container"));
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+// class Fetch extends React.Component {
+//      state = {users : [],}
+
+//      fetchData(){
+//       fetch("https://jsonplaceholder.typicode.com/users")
+//          .then((res)=>{return res.json()})
+//          .then((data)=>{this.setState({users:data,})})
+//          .catch((err)=>{console.log(err);})
+//      }
+
+//      render() {
+
+//         return(
+//             <div>
+//                 <h1>click here to get data</h1>
+//                 <button onClick={()=>{this.fetchData()}}>Click ME</button>
+//                 {this.state.users.map((value, ind)=>{
+                    
+//                     return(
+//                         <table style={{border: "1px solid black", borderCollapse: "collapse",}} className="table">
+//                             <tr>
+//                                 <th style={{border: "1px solid black", borderCollapse: "collapse",}} className="th">ID</th>
+//                                 <th style={{border: "1px solid black", borderCollapse: "collapse",}} className="th">Name</th>
+//                                 <th style={{border: "1px solid black", borderCollapse: "collapse",}} className="th">userName</th>
+//                                 <th style={{border: "1px solid black", borderCollapse: "collapse",}} className="th">Email</th>
+//                             </tr>
+//                             <tr>
+//                                 <td style={{border: "1px solid black", borderCollapse: "collapse",}} className="tr" key={ind}>{value.id}</td>
+//                                 <td style={{border: "1px solid black", borderCollapse: "collapse",}} className="tr">{value.name}</td>
+//                                 <td style={{border: "1px solid black", borderCollapse: "collapse",}} className="tr">{value.username}</td>
+//                                 <td style={{border: "1px solid black", borderCollapse: "collapse",}} className="tr">{value.email}</td>
+//                             </tr>
+//                         </table>
+//                     )
+//                 })}
+//             </div>
+//         )
+//      }
+// }
+
+// ReactDOM.render(<Fetch/>,document.getElementById("container"))
+
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+class Fetch extends React.Component{
+    state = {users:[],}
+
+    fetchData () {
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then((res)=>{return res.json()})
+        // object inside setState
+        .then((data)=>{this.setState({users:data,})})
+        .catch((err)=>{console.log(err);})
+    }
+
+    render(){
+
+        return(
+            <div>
+                <h1>click to get data</h1>
+                {/* object inside button */}
+                <button onClick={()=>{this.fetchData()}}>Click Me</button>
+                {this.state.users.map((value,ind)=>{
+                    return(
+                        <table style={{border:"1px solid red", borderCollapse:"collapse"}} className="table">
+                            <tr>
+                                <th style={{border:"1px solid black", bordeerCollapse:"collapse"}} className="th">ID</th>
+                                <th style={{border:"1px solid black", bordeerCollapse:"collapse"}} className="th">Name</th>
+                                <th style={{border:"1px solid black", bordeerCollapse:"collapse"}} className="th">userName</th>
+                                <th style={{border:"1px solid black", bordeerCollapse:"collapse"}} className="th">Email</th>
+                            </tr>
+                            <tr>
+                                <td style={{border:"1px solid blue", bordeerCollapse:"collapse"}} className="tr" key={ind}>{value.id}</td>
+                                <td style={{border:"1px solid blue", bordeerCollapse:"collapse"}} className="tr">{value.name}</td>
+                                <td style={{border:"1px solid blue", bordeerCollapse:"collapse"}} className="tr">{value.username}</td>
+                                <td style={{border:"1px solid blue", bordeerCollapse:"collapse"}} className="tr">{value.email}</td>
+                            </tr>
+                        </table>
+                    )
+                })}
+            </div>
+
+        )
+
+
+    }
+
 }
 
-ReactDOM.render(
-<div>
-<Content logo = "AstonMartin" product = "Bond's car"/>
-<Header logo = "Pagani" product = "unique design"/>
-<Footer logo = "RR" product = "engine"/>
-</div>,
- document.getElementById("container"));
 
+        
+
+ReactDOM.render(<Fetch/>,document.getElementById("container"))
